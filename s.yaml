@@ -31,9 +31,12 @@ services:
         caPort: 8188
         customRuntimeConfig:
           command:
-            - python
+            - sh
           args:
-            - main.py
+            - -c
+            - |
+            - pip install -r requirements.txt
+            - python main.py
       triggers:
         - name: httpTrigger
           type: http
