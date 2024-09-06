@@ -35,8 +35,8 @@ services:
           args:
             - -c
             - |
-            - pip install -r requirements.txt
-            - python main.py
+              pip install -r requirements.txt
+              python main.py
       triggers:
         - name: httpTrigger
           type: http
